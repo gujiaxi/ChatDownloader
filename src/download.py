@@ -27,7 +27,7 @@ def download(username, password, range = []):
     print str(len(chats)) + " chats found."
     filelist = []
     for num in range:
-        filename = "chat " + str(num) + ".txt"
+        filename = str(num) + ".txt"
         print "Downloading chat #" + str(num) + " of " + chatsToDownload + "."
         status, data = imap.fetch(num, '(RFC822)')
         if status == 'OK':
